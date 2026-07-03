@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website HIRMAFALAKA</title>
+    
+    <!-- Menggunakan Tailwind CSS via CDN untuk styling yang cepat dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Mengambil Font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Konfigurasi warna kustom dan font bawaan Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#43897b', /* Warna hijau tosca menyesuaikan tombol dan logo */
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'], /* Font teks biasa */
+                        serif: ['Playfair Display', 'serif'], /* Font judul hero */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Tambahan (Khusus untuk garis bawah menu aktif) -->
+    <style>
+        .nav-link { position: relative; padding-bottom: 0.5rem; transition: color 0.3s; }
+        .nav-link:hover { color: #111827; }
+        .nav-link.active { color: #111827; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background-color: #fbbf24; border-radius: 2px; }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- BAGIAN NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 bg-white z-50 px-6 py-4 flex items-center justify-between shadow-sm">
+        
+        <!-- Logo Header (Diperbesar ukurannya) -->
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="flex-shrink-0 block">
+                <!-- Ukuran tinggi gambar (h-14 dan h-[70px]) disesuaikan agar logo jauh lebih besar dan proporsional -->
+                <img src="image/header.png" alt="Logo HIRMAFALAKA" class="h-14 md:h-[70px] w-auto object-contain">
+            </a>
+        </div>
+
+        <!-- Menu Navigasi (Tengah) -->
+        <ul class="hidden lg:flex items-center gap-8 text-sm text-gray-500">
+            <li><a href="index.html" class="nav-link active">Beranda</a></li>
+            <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
+            <li><a href="bumh.html" class="nav-link">BUMH</a></li>
+            <li><a href="kas-bulanan.html" class="nav-link">Kas Bulanan</a></li>
+            <li><a href="artikel.html" class="nav-link">Artikel</a></li>
+            <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+        </ul>
+        
+        <!-- Tombol Kunjungi Kami (Kanan) -->
+        <a href="#" class="hidden lg:inline-block bg-brand hover:bg-[#346b60] text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-colors">Kunjungi Kami</a>
+        
+        <!-- Tombol Menu Mobile (Hamburger) -->
+        <button class="lg:hidden text-brand hover:text-gray-900 focus:outline-none">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- BAGIAN HERO (Gambar Latar & Sambutan) -->
+    <header class="relative w-full h-screen min-h-[600px] flex items-center justify-center text-center mt-16 lg:mt-0">
+        
+        <!-- Gambar Latar Belakang -->
+        <div class="absolute inset-0 bg-[url('image/utama.JPEG')] bg-cover bg-center">
+            <!-- Overlay Gelap agar teks mudah dibaca -->
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Konten Teks & Tombol -->
+        <div class="relative z-10 px-6 max-w-4xl mx-auto text-white">
+            <h2 class="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold leading-snug mb-6 drop-shadow-md">
+                Selamat Datang di<br>Website HIRMAFALAKA :)
+            </h2>
+            <p class="text-base md:text-lg lg:text-xl font-normal mb-10 text-gray-200 drop-shadow max-w-2xl mx-auto leading-relaxed">
+                Website resmi milik Himpunan Remaja Masjid Alfalah Desa Kaliglagah, Kec. Loano, Kab. Purworejo, Jawa Tengah
+            </p>
+            
+            <!-- Grup Tombol -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tentang-kami.html" class="bg-brand hover:bg-[#346b60] text-white px-8 py-3.5 rounded-full font-medium transition-colors w-full sm:w-auto">
+                    Pelajari tentang kami
+                </a>
+                <a href="artikel.html" class="border-[1.5px] border-white text-white hover:bg-white hover:text-brand px-8 py-3.5 rounded-full font-medium transition-colors w-full sm:w-auto">
+                    Lihat Artikel
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">"Dari Remaja, Untuk Warga"</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto italic">"Pintu kami selalu terbuka untuk kamu yang mau belajar, berproses, dan menebar kebaikan bareng-bareng di sini."</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <img src="image/perjalanan-kami.jpeg" alt="Perjalanan Kami" class="rounded-2xl shadow-lg w-full h-auto">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl font-serif font-bold text-gray-900 mb-6">Perjalanan Kami</h2>
+                <div class="space-y-4 text-gray-600">
+                    <h3 class="font-bold text-gray-800">Melanjutkan Estafet Kebaikan (Tahun ...)</h3>
+                    <p>Wadah remaja masjid ini sebenarnya sudah berdiri sejak lama, dirintis oleh para senior terdahulu kami yang luar biasa. Kami yang sekarang hanyalah generasi penerus yang menerima estafet amanah untuk menjaga agar api semangat ini tidak padam.</p>
+                    <h3 class="font-bold text-gray-800">Menyesuaikan Zaman, Menjaga Tradisi</h3>
+                    <p>Seiring berjalannya waktu, kami berusaha mengemas kegiatan masjid agar lebih seru dan relevan dengan anak muda zaman sekarang...</p>
+                </div>
+                <a href="tentang-kami.html" class="inline-block mt-8 border border-brand text-brand px-7 py-2.5 rounded-full text-sm font-semibold hover:bg-brand hover:text-white transition-colors">Lihat Tentang Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif font-bold text-gray-900 mb-2">Acara dan Kegiatan yang akan datang</h2>
+            <p class="text-gray-500 mb-12">Jangan lewatkan momen kebersamaan kita! Yuk, catat tanggalnya dan ikut keseruannya bareng kami.</p>
+            
+            <div class="max-w-md mx-auto bg-white rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] p-0 text-left overflow-hidden">
+                <div class="relative">
+                    <img src="image/agustusan.jpeg" alt="Kegiatan" class="w-full h-56 object-cover">
+                    <!-- Overlay Tanggal di atas gambar -->
+                    <div class="absolute bottom-4 left-5 text-white text-sm font-bold drop-shadow-md">16 Agustus 2026</div>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-2">Lomba Agustusan</h4>
+                    <p class="text-xs text-gray-400 mb-4 font-medium">6:00 PM - 8:00 AM</p>
+                    <p class="text-gray-600 text-sm mb-2">Masih dalam tahap pengembangan kegiatan, tunggu info selanjutnya yaaa...</p>
+                </div>
+            </div>
+            <a href="https://wa.me/6285786019375" class="inline-block mt-10 bg-[#fbbf24] hover:bg-[#eab308] text-white px-8 py-3 rounded-full font-medium transition-colors text-sm">
+                Tanyakan lebih lanjut
+            </a>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center text-gray-900 mb-4">Apa Kata Mereka?</h2>
+            <p class="text-center text-gray-600 mb-12">Suara dari lingkungan sekitar tentang langkah kecil yang kami lakukan.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col">
+                    <p class="text-gray-600 italic mb-6 text-sm leading-relaxed flex-grow">"Sejak anak-anak muda di HIRMAFALAKA ini aktif, suasana masjid jadi jauh lebih hidup. Acara seperti 17 Agustusan dan kepanitiaan Ramadan kemarin sukses besar karena bantuan mereka. Warga sangat terbantu dan bangga melihat anak-anak muda yang peduli dengan lingkungannya."</p>
+                    <p class="font-bold text-gray-900 text-sm">Anonim</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col">
+                    <p class="text-gray-600 italic mb-6 text-sm leading-relaxed flex-grow">"Dulu anak saya sering main keluar gak jelas bapaknya sampai khawatir. Tapi sejak ikut kumpul di remaja masjid ini, dia jadi punya kegiatan positif, bahkan sekarang rajin ke masjid dan belajar ngaji lagi. Terima kasih buat teman-teman remaja masjid yang sudah jadi lingkungan yang baik buat anak saya."</p>
+                    <p class="font-bold text-gray-900 text-sm">Anonim</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col">
+                    <p class="text-gray-600 italic mb-6 text-sm leading-relaxed flex-grow">"Awalnya saya minder mau gabung karena dikira remaja masjid itu harus yang pinter agama banget. Ternyata di sini seru, pembawaannya santai, dan semuanya merangkul. Website-nya juga keren, jadi gampang tahu kalau ada info kegiatan atau jadwal futsal bareng."</p>
+                    <p class="font-bold text-gray-900 text-sm">Anonim</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="kontak-kami.html" class="inline-block bg-brand hover:bg-[#346b60] text-white px-8 py-3 rounded-full font-medium transition-colors text-sm">
+                    Kirim kritik, saran ataupun masukan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white overflow-hidden relative">
+        <!-- Latar Belakang Abstrak (Blob) Oranye di Sebelah Kanan -->
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[20%] -z-0 opacity-100 hidden md:block">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] fill-[#e39a48]">
+              <path d="M47.7,-59.4C60.4,-48.6,68.2,-31.6,71.2,-13.7C74.3,4.2,72.6,22.9,64.3,38.8C56,54.7,41.1,67.8,24.1,72.7C7.1,77.5,-12,74.1,-27.7,65C-43.4,55.9,-55.7,41,-64.1,23.5C-72.5,6,-77,-14.2,-69.8,-29.4C-62.6,-44.6,-43.7,-54.9,-27.2,-64.1C-10.7,-73.3,3.4,-81.4,18.7,-78.9C34,-76.4,35,-70.2,47.7,-59.4Z" transform="translate(100 100) rotate(15)" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Momen dari Hirmafalaka</h2>
+            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Setiap jepretan foto punya cerita tentang tawa, kerja keras, dan kebersamaan kami di tengah warga.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12 text-left">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] p-0 overflow-hidden flex flex-col h-full border border-gray-50">
+                    <img src="image/bukber.jpg" class="w-full h-52 object-cover" alt="Bukber">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-gray-900 mb-2">Bukber Ramadhan</h3>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">Indahnya kebersamaan saat berbuka puasa, menyantap hidangan sederhana dengan penuh rasa syukur dan suka cita.</p>
+                        <!-- Ganti Tautan Google Drive di bawah ini -->
+                        <a href="https://drive.google.com/drive/folders/1GlAtqIRnf845doQ19oOQlnIUVYP472US" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] p-0 overflow-hidden flex flex-col h-full border border-gray-50">
+                    <img src="image/agustusan.jpeg" class="w-full h-52 object-cover" alt="Lomba">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-gray-900 mb-2">Lomba Kemerdekaan</h3>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">Keseruan merayakan hari kemerdekaan lewat berbagai lomba yang mendidik dan mempererat kebersamaan bagi anak-anak, remaja, hingga dewasa.</p>
+                        <!-- Ganti Tautan Google Drive di bawah ini -->
+                        <a href="https://drive.google.com/drive/folders/1VdkZ9LfAFEEk_L8P2iIhWbOjDREDtq4x" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] p-0 overflow-hidden flex flex-col h-full border border-gray-50">
+                    <img src="image/idul-adha.jpeg" class="w-full h-52 object-cover" alt="Idul Adha">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-gray-900 mb-2">Bantu-bantu di Idul Adha</h3>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">Momen gotong royong warga saat hari raya kurban sebagai wadah untuk saling berkumpul, mendukung, dan berbagi kebahagiaan dengan sesama.</p>
+                        <!-- Ganti Tautan Google Drive di bawah ini -->
+                        <a href="" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <!-- Ganti Tautan Google Drive Utama di bawah ini -->
+                <a href="https://drive.google.com/drive/folders/CONTOH_LINK_FOLDER_UTAMA" target="_blank" class="inline-block bg-brand hover:bg-[#346b60] text-white px-8 py-3 rounded-full font-medium transition-colors text-sm">Lihat Semua Kenangan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAGIAN PRE-FOOTER (Banner Quote) -->
+    <section class="relative py-24 flex items-center justify-center text-center">
+        <!-- Background Image (Gambar Latar - menggunakan efek bg-fixed untuk gaya parallax) -->
+        <div class="absolute inset-0 bg-[url('image/utama.jpeg')] bg-cover bg-center bg-fixed">
+            <!-- Overlay Gelap -->
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Konten Teks -->
+        <div class="relative z-10 px-6 max-w-4xl mx-auto text-white">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 drop-shadow-md">
+                "Dari Remaja Untuk Warga"
+            </h2>
+            <p class="text-base md:text-lg font-normal text-gray-200 drop-shadow max-w-2xl mx-auto leading-relaxed">
+                "Pintu kami selalu terbuka untuk kamu yang mau belajar, berproses, dan menebar kebaikan bareng-bareng di sini."
+            </p>
+        </div>
+    </section>
+
+    <!-- BAGIAN FOOTER -->
+    <footer class="bg-[#2a303c] text-gray-300 py-16 font-sans">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            
+            <!-- Kolom 1: Logo & Deskripsi -->
+            <div>
+                <!-- Logo Footer diperbesar dan text h4 dihilangkan -->
+                <a href="index.html" class="block mb-6">
+                    <!-- Ukuran logo sama dengan header agar seragam dan jelas (h-[70px]) -->
+                    <img src="image/footer.png" alt="Logo HIRMAFALAKA" class="h-14 md:h-[70px] w-auto object-contain">
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Platform resmi HIRMAFALAKA. Tempat kami berkumpul dan berkolaborasi memakmurkan Masjid Al-Falah, Desa Kaliglagah, Purworejo.
+                </p>
+            </div>
+
+            <!-- Kolom 2: Tautan Cepat -->
+            <div>
+                <h4 class="text-white font-bold mb-6">Tautan Cepat</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Beranda</a></li>
+                    <li><a href="tentang-kami.html" class="hover:text-white transition-colors">Tentang kami</a></li>
+                    <li><a href="bumh.html" class="hover:text-white transition-colors">BUMH</a></li>
+                    <li><a href="artikel.html" class="hover:text-white transition-colors">Artikel</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Jadwal Ngaji -->
+            <div>
+                <h4 class="text-white font-bold mb-6">Jadwal Ngaji</h4>
+                <div class="space-y-3 text-sm text-gray-400">
+                    <p>Sore: 6:00 AM – 12:00 PM</p>
+                    <p>Malam: 4:00 PM – 9:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Kolom 4: Kontak Kami -->
+            <div>
+                <h4 class="text-white font-bold mb-6">Kontak Kami</h4>
+                <div class="space-y-3 text-sm text-gray-400">
+                    <p>085786019375</p>
+                    <p>hirmafalaka26@gmail.com</p>
+                    <p class="leading-relaxed">Krajan, Kaliglagah, Lono, Purworejo, Jawa Tengah 54181</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Bawah Footer (Copyright & Social Media Icons) -->
+        <div class="container mx-auto px-6 mt-16 pt-8 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+            
+            <!-- Ikon Sosial Media -->
+            <div class="flex items-center gap-5">
+                <!-- Facebook -->
+                <a href="#" class="hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.48-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.54-4.5-10.02-10-10.02z"/></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.22.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.22-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.22.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.22-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.05-.41-2.22-.06-1.27-.07-1.65-.07-4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.27.06-2.14.26-2.9.56-.79.3-1.46.72-2.13 1.39-.67.67-1.09 1.34-1.39 2.13-.3.76-.5 1.63-.56 2.9C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.14.56 2.9.3.79.72 1.46 1.39 2.13.67.67 1.34 1.09 2.13 1.39.76.3 1.63.5 2.9.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.14-.26 2.9-.56.79-.3 1.46-.72 2.13-1.39.67-.67 1.09-1.34 1.39-2.13.3-.76.5-1.63.56-2.9.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.14-.56-2.9-.3-.79-.72-1.46-1.39-2.13-.67-.67-1.34-1.09-2.13-1.39-.76-.3-1.63-.5-2.9-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm7.85-11.45a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="#" class="hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.76c1.4-2.58 7-2.78 7 2.47v6.77z"/></svg>
+                </a>
+                <!-- X / Twitter -->
+                <a href="#" class="hover:text-white transition-colors font-bold font-serif text-lg leading-none flex items-center justify-center">
+                    𝕏
+                </a>
+            </div>
+            
+            <!-- Copyright -->
+            <div>
+                &copy; 2026 Hirmafalaka. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

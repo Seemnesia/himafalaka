@@ -43,11 +43,11 @@
 
             <!-- Menu Navigasi (Tengah) - Ditambahkan ID 'mobile-menu' -->
             <ul id="mobile-menu" class="hidden lg:flex flex-col lg:flex-row absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none py-4 lg:py-0 px-6 lg:px-0 items-center gap-8 text-sm text-gray-500 z-40">
-                <li><a href="index.html" class="nav-link active">Beranda</a></li>
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
                 <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
                 <li><a href="bumh.html" class="nav-link">BUMH</a></li>
                 <li><a href="kas-bulanan.html" class="nav-link">Kas Bulanan</a></li>
-                <li><a href="artikel.html" class="nav-link">Artikel</a></li>
+                <li><a href="artikel.html" class="nav-link active">Artikel</a></li>
                 <li><a href="kontak.html" class="nav-link">Kontak</a></li>
                 <!-- Tombol Kunjungi Kami (Pindah ke dalam menu agar muncul di mobile juga) -->
                 <li class="lg:hidden w-full text-center mt-4"><a href="#" class="inline-block bg-brand hover:bg-[#346b60] text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-colors w-full">Kunjungi Kami</a></li>
@@ -56,8 +56,8 @@
             <!-- Tombol Kunjungi Kami (Kanan - Desktop) -->
             <a href="#" class="hidden lg:inline-block bg-brand hover:bg-[#346b60] text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-colors">Kunjungi Kami</a>
             
-            <!-- Tombol Menu Mobile (Hamburger) - Ditambahkan ID 'menu-btn' -->
-            <button id="menu-btn" class="lg:hidden text-brand hover:text-gray-900 focus:outline-none">
+            <!-- Tombol Menu Mobile (Hamburger) - Ditambahkan ID 'menu-btn' dan fungsi onclick -->
+            <button id="menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); document.getElementById('mobile-menu').classList.toggle('flex');" class="lg:hidden text-brand hover:text-gray-900 focus:outline-none">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -75,28 +75,28 @@
                 <!-- Artikel 1 -->
                 <div>
                     <!-- Path gambar lokal -->
-                    <img src="image/artikel-1.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <img src="image/beranda/artikel-1.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
                     <h3 class="font-serif font-bold text-xl mb-2">Kegiatan Ramadhan di Masjid</h3>
                     <p class="text-gray-500 text-sm mb-2">Rangkaian acara selama bulan suci dan persiapan takjil harian.</p>
                     <p class="text-xs text-gray-400">12/03/2026 · 3 min read</p>
                 </div>
                 <!-- Artikel 2 -->
                 <div>
-                    <img src="image/artikel-2.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <img src="image/beranda/artikel-2.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
                     <h3 class="font-serif font-bold text-xl mb-2">Pentingnya Sedekah</h3>
                     <p class="text-gray-500 text-sm mb-2">Mengapa kita harus berbagi dengan sesama di lingkungan sekitar.</p>
                     <p class="text-xs text-gray-400">05/03/2026 · 2 min read</p>
                 </div>
                 <!-- Artikel 3 -->
                 <div>
-                    <img src="image/artikel-3.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <img src="image/beranda/artikel-3.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
                     <h3 class="font-serif font-bold text-xl mb-2">Rapat Rutin Pengurus</h3>
                     <p class="text-gray-500 text-sm mb-2">Pembahasan program kerja bulanan dan evaluasi kegiatan BUMH.</p>
                     <p class="text-xs text-gray-400">28/02/2026 · 1 min read</p>
                 </div>
                 <!-- Artikel 4 -->
                 <div>
-                    <img src="image/artikel-4.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <img src="image/beranda/artikel-4.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
                     <h3 class="font-serif font-bold text-xl mb-2">Gotong Royong Bersih Desa</h3>
                     <p class="text-gray-500 text-sm mb-2">Kolaborasi remaja masjid dan warga sekitar membersihkan parit.</p>
                     <p class="text-xs text-gray-400">15/02/2026 · 4 min read</p>
@@ -107,14 +107,14 @@
             <div id="page-2" class="grid md:grid-cols-2 gap-x-12 gap-y-16 hidden transition-opacity duration-300">
                 <!-- Artikel 5 -->
                 <div>
-                    <img src="image/artikel-5.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <img src="image/beranda/artikel-5.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
                     <h3 class="font-serif font-bold text-xl mb-2">Kajian Muslimah</h3>
                     <p class="text-gray-500 text-sm mb-2">Membedah peran wanita dalam Islam bersama ustazah undangan.</p>
                     <p class="text-xs text-gray-400">02/02/2026 · 5 min read</p>
                 </div>
                 <!-- Artikel 6 -->
                 <div>
-                    <img src="image/artikel-6.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
+                    <img src="image/beranda/artikel-6.jpg" alt="Artikel" class="w-full h-64 object-cover mb-4 rounded-md">
                     <h3 class="font-serif font-bold text-xl mb-2">Bantuan Bencana Alam</h3>
                     <p class="text-gray-500 text-sm mb-2">Penyaluran donasi dari jamaah untuk korban banjir di desa sebelah.</p>
                     <p class="text-xs text-gray-400">20/01/2026 · 2 min read</p>
@@ -199,8 +199,8 @@
             <div>
                 <h4 class="text-white font-bold mb-6">Kontak Kami</h4>
                 <div class="space-y-3 text-sm text-gray-400">
-                    <p>085786019375</p>
-                    <p>hirmafalaka26@gmail.com</p>
+                    <p>+1 (604) 555-1234</p>
+                    <p>hirmafalaka@gmail.com</p>
                     <p class="leading-relaxed">Krajan, Kaliglagah, Lono, Purworejo, Jawa Tengah 54181</p>
                 </div>
             </div>

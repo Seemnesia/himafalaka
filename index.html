@@ -40,18 +40,16 @@
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50 flex flex-col min-h-screen">
 
-    <!-- BAGIAN NAVBAR -->
     <nav class="fixed top-0 left-0 right-0 bg-white z-50 px-6 py-4 shadow-sm">
         <div class="flex items-center justify-between">
-            <!-- Logo Header (Diperbesar ukurannya) -->
+            <!-- Logo Header -->
             <div class="flex items-center gap-3">
                 <a href="index.html" class="flex-shrink-0 block">
-                    <!-- Ukuran tinggi gambar (h-14 dan h-[70px]) disesuaikan agar logo jauh lebih besar dan proporsional -->
                     <img src="image/header.png" alt="Logo HIRMAFALAKA" class="h-14 md:h-[70px] w-auto object-contain">
                 </a>
             </div>
 
-            <!-- Menu Navigasi (Tengah) - Ditambahkan ID 'mobile-menu' -->
+            <!-- Menu Navigasi (Tengah) -->
             <ul id="mobile-menu" class="hidden lg:flex flex-col lg:flex-row absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none py-4 lg:py-0 px-6 lg:px-0 items-center gap-8 text-sm text-gray-500 z-40">
                 <li><a href="index.html" class="nav-link active">Beranda</a></li>
                 <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
@@ -59,15 +57,15 @@
                 <li><a href="kas-bulanan.html" class="nav-link">Kas Bulanan</a></li>
                 <li><a href="artikel.html" class="nav-link">Artikel</a></li>
                 <li><a href="kontak.html" class="nav-link">Kontak</a></li>
-                <!-- Tombol Kunjungi Kami (Pindah ke dalam menu agar muncul di mobile juga) -->
+                <!-- Tombol Kunjungi Kami di Mobile -->
                 <li class="lg:hidden w-full text-center mt-4"><a href="#" class="inline-block bg-brand hover:bg-[#346b60] text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-colors w-full">Kunjungi Kami</a></li>
             </ul>
             
             <!-- Tombol Kunjungi Kami (Kanan - Desktop) -->
             <a href="#" class="hidden lg:inline-block bg-brand hover:bg-[#346b60] text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-colors">Kunjungi Kami</a>
             
-            <!-- Tombol Menu Mobile (Hamburger) - Ditambahkan ID 'menu-btn' -->
-            <button id="menu-btn" class="lg:hidden text-brand hover:text-gray-900 focus:outline-none">
+            <!-- Tombol Menu Mobile (Hamburger) dengan tambahan perintah OnClick -->
+            <button id="menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); document.getElementById('mobile-menu').classList.toggle('flex');" class="lg:hidden text-brand hover:text-gray-900 focus:outline-none">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -95,10 +93,10 @@
             
             <!-- Grup Tombol -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="tentang-kami.html" class="bg-brand hover:bg-[#346b60] text-white px-8 py-3.5 rounded-full font-medium transition-colors w-full sm:w-auto">
+                <a href="#" class="bg-brand hover:bg-[#346b60] text-white px-8 py-3.5 rounded-full font-medium transition-colors w-full sm:w-auto">
                     Pelajari tentang kami
                 </a>
-                <a href="artikel.html" class="border-[1.5px] border-white text-white hover:bg-white hover:text-brand px-8 py-3.5 rounded-full font-medium transition-colors w-full sm:w-auto">
+                <a href="#" class="border-[1.5px] border-white text-white hover:bg-white hover:text-brand px-8 py-3.5 rounded-full font-medium transition-colors w-full sm:w-auto">
                     Lihat Artikel
                 </a>
             </div>
@@ -125,7 +123,7 @@
                     <h3 class="font-bold text-gray-800">Menyesuaikan Zaman, Menjaga Tradisi</h3>
                     <p>Seiring berjalannya waktu, kami berusaha mengemas kegiatan masjid agar lebih seru dan relevan dengan anak muda zaman sekarang...</p>
                 </div>
-                <a href="tentang-kami.html" class="inline-block mt-8 border border-brand text-brand px-7 py-2.5 rounded-full text-sm font-semibold hover:bg-brand hover:text-white transition-colors">Lihat Tentang Kami</a>
+                <a href="#" class="inline-block mt-8 border border-brand text-brand px-7 py-2.5 rounded-full text-sm font-semibold hover:bg-brand hover:text-white transition-colors">Lihat Tentang Kami</a>
             </div>
         </div>
     </section>
@@ -147,8 +145,8 @@
                     <p class="text-gray-600 text-sm mb-2">Masih dalam tahap pengembangan kegiatan, tunggu info selanjutnya yaaa...</p>
                 </div>
             </div>
-            <a href="https://wa.me/6285786019375" class="inline-block mt-10 bg-[#fbbf24] hover:bg-[#eab308] text-white px-8 py-3 rounded-full font-medium transition-colors text-sm">
-                Tanyakan lebih lanjut
+            <a href="#" class="inline-block mt-10 bg-[#fbbf24] hover:bg-[#eab308] text-white px-8 py-3 rounded-full font-medium transition-colors text-sm">
+                Tampilkan lebih lanjut
             </a>
         </div>
     </section>
@@ -177,7 +175,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="kontak-kami.html" class="inline-block bg-brand hover:bg-[#346b60] text-white px-8 py-3 rounded-full font-medium transition-colors text-sm">
+                <a href="#" class="inline-block bg-brand hover:bg-[#346b60] text-white px-8 py-3 rounded-full font-medium transition-colors text-sm">
                     Kirim kritik, saran ataupun masukan
                 </a>
             </div>
@@ -199,32 +197,32 @@
             <div class="grid md:grid-cols-3 gap-6 mb-12 text-left">
                 <!-- Card 1 -->
                 <div class="bg-white rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] p-0 overflow-hidden flex flex-col h-full border border-gray-50">
-                    <img src="image/bukber.jpg" class="w-full h-52 object-cover" alt="Bukber">
+                    <img src="image/beranda/momen-bukber.jpg" class="w-full h-52 object-cover" alt="Bukber">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-gray-900 mb-2">Bukber Ramadhan</h3>
                         <p class="text-sm text-gray-600 mb-6 flex-grow">Indahnya kebersamaan saat berbuka puasa, menyantap hidangan sederhana dengan penuh rasa syukur dan suka cita.</p>
                         <!-- Ganti Tautan Google Drive di bawah ini -->
-                        <a href="https://drive.google.com/drive/folders/1GlAtqIRnf845doQ19oOQlnIUVYP472US" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
+                        <a href="https://drive.google.com/drive/folders/CONTOH_LINK_FOLDER_1" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="bg-white rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] p-0 overflow-hidden flex flex-col h-full border border-gray-50">
-                    <img src="image/agustusan.jpeg" class="w-full h-52 object-cover" alt="Lomba">
+                    <img src="image/beranda/momen-lomba.jpg" class="w-full h-52 object-cover" alt="Lomba">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-gray-900 mb-2">Lomba Kemerdekaan</h3>
                         <p class="text-sm text-gray-600 mb-6 flex-grow">Keseruan merayakan hari kemerdekaan lewat berbagai lomba yang mendidik dan mempererat kebersamaan bagi anak-anak, remaja, hingga dewasa.</p>
                         <!-- Ganti Tautan Google Drive di bawah ini -->
-                        <a href="https://drive.google.com/drive/folders/1VdkZ9LfAFEEk_L8P2iIhWbOjDREDtq4x" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
+                        <a href="https://drive.google.com/drive/folders/CONTOH_LINK_FOLDER_2" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
                     </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="bg-white rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] p-0 overflow-hidden flex flex-col h-full border border-gray-50">
-                    <img src="image/idul-adha.jpeg" class="w-full h-52 object-cover" alt="Idul Adha">
+                    <img src="image/beranda/momen-idul-adha.jpg" class="w-full h-52 object-cover" alt="Idul Adha">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-gray-900 mb-2">Bantu-bantu di Idul Adha</h3>
                         <p class="text-sm text-gray-600 mb-6 flex-grow">Momen gotong royong warga saat hari raya kurban sebagai wadah untuk saling berkumpul, mendukung, dan berbagi kebahagiaan dengan sesama.</p>
                         <!-- Ganti Tautan Google Drive di bawah ini -->
-                        <a href="" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
+                        <a href="https://drive.google.com/drive/folders/CONTOH_LINK_FOLDER_3" target="_blank" class="text-[#e39a48] hover:text-[#c48135] font-medium text-sm transition-colors mt-auto">Lihat Kenangan &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -295,8 +293,8 @@
             <div>
                 <h4 class="text-white font-bold mb-6">Kontak Kami</h4>
                 <div class="space-y-3 text-sm text-gray-400">
-                    <p>085786019375</p>
-                    <p>hirmafalaka26@gmail.com</p>
+                    <p>+1 (604) 555-1234</p>
+                    <p>hirmafalaka@gmail.com</p>
                     <p class="leading-relaxed">Krajan, Kaliglagah, Lono, Purworejo, Jawa Tengah 54181</p>
                 </div>
             </div>
@@ -331,5 +329,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- SCRIPT UNTUK MENU MOBILE -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
 </body>
 </html>

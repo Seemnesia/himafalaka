@@ -41,35 +41,38 @@
 <body class="font-sans antialiased text-gray-800 bg-gray-50 flex flex-col min-h-screen">
 
     <!-- BAGIAN NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 bg-white z-50 px-6 py-4 flex items-center justify-between shadow-sm">
-        
-        <!-- Logo Header (Diperbesar ukurannya) -->
-        <div class="flex items-center gap-3">
-            <a href="index.html" class="flex-shrink-0 block">
-                <!-- Ukuran tinggi gambar (h-14 dan h-[70px]) disesuaikan agar logo jauh lebih besar dan proporsional -->
-                <img src="image/header.png" alt="Logo HIRMAFALAKA" class="h-14 md:h-[70px] w-auto object-contain">
-            </a>
-        </div>
+    <nav class="fixed top-0 left-0 right-0 bg-white z-50 px-6 py-4 shadow-sm">
+        <div class="flex items-center justify-between">
+            <!-- Logo Header (Diperbesar ukurannya) -->
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex-shrink-0 block">
+                    <!-- Ukuran tinggi gambar (h-14 dan h-[70px]) disesuaikan agar logo jauh lebih besar dan proporsional -->
+                    <img src="image/header.png" alt="Logo HIRMAFALAKA" class="h-14 md:h-[70px] w-auto object-contain">
+                </a>
+            </div>
 
-        <!-- Menu Navigasi (Tengah) -->
-        <ul class="hidden lg:flex items-center gap-8 text-sm text-gray-500">
-            <li><a href="index.html" class="nav-link active">Beranda</a></li>
-            <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
-            <li><a href="bumh.html" class="nav-link">BUMH</a></li>
-            <li><a href="kas-bulanan.html" class="nav-link">Kas Bulanan</a></li>
-            <li><a href="artikel.html" class="nav-link">Artikel</a></li>
-            <li><a href="kontak.html" class="nav-link">Kontak</a></li>
-        </ul>
-        
-        <!-- Tombol Kunjungi Kami (Kanan) -->
-        <a href="#" class="hidden lg:inline-block bg-brand hover:bg-[#346b60] text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-colors">Kunjungi Kami</a>
-        
-        <!-- Tombol Menu Mobile (Hamburger) -->
-        <button class="lg:hidden text-brand hover:text-gray-900 focus:outline-none">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
+            <!-- Menu Navigasi (Tengah) - Ditambahkan ID 'mobile-menu' -->
+            <ul id="mobile-menu" class="hidden lg:flex flex-col lg:flex-row absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none py-4 lg:py-0 px-6 lg:px-0 items-center gap-8 text-sm text-gray-500 z-40">
+                <li><a href="index.html" class="nav-link active">Beranda</a></li>
+                <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="bumh.html" class="nav-link">BUMH</a></li>
+                <li><a href="kas-bulanan.html" class="nav-link">Kas Bulanan</a></li>
+                <li><a href="artikel.html" class="nav-link">Artikel</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <!-- Tombol Kunjungi Kami (Pindah ke dalam menu agar muncul di mobile juga) -->
+                <li class="lg:hidden w-full text-center mt-4"><a href="#" class="inline-block bg-brand hover:bg-[#346b60] text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-colors w-full">Kunjungi Kami</a></li>
+            </ul>
+            
+            <!-- Tombol Kunjungi Kami (Kanan - Desktop) -->
+            <a href="#" class="hidden lg:inline-block bg-brand hover:bg-[#346b60] text-white px-7 py-2.5 rounded-full text-sm font-semibold transition-colors">Kunjungi Kami</a>
+            
+            <!-- Tombol Menu Mobile (Hamburger) - Ditambahkan ID 'menu-btn' -->
+            <button id="menu-btn" class="lg:hidden text-brand hover:text-gray-900 focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
     </nav>
 
     <!-- BAGIAN HERO (Gambar Latar & Sambutan) -->
